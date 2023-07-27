@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zachey",
   "license": "ISC",
   "dependencies": {
     "argparse": "^2.0.1",
