@@ -179,7 +179,7 @@ function main() {
   const args = parser.parseArgs();
   const crawler = new Crawler();
   if (args.config === undefined) {
-    crawler.loadConfigFile("./config.json");
+    crawler.loadConfigFile("config.json");
   } else {
     crawler.loadConfigFile(args.config);
   }
