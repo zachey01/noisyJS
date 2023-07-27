@@ -1,6 +1,6 @@
 {
   "name": "@zachey/noisyjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Random internet traffic noise generator.",
   "main": "index.js",
   "scripts": {
