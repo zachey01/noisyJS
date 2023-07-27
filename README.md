@@ -5,7 +5,7 @@
 ### Installation
 
 ```shell
-npm install noisyjs
+npm install @zachey/noisyjs -g
 ```
 
 or
@@ -16,9 +16,9 @@ or
 
 ### Usage
 
-`noisyjs` - run with default config.
+`npx @zachey/noisyjs` - run with default config.
 
-`noisyjs --config yourcfg.json` - run with other config.
+`npx @zachey/noisyjs --config yourcfg.json` - run with other config.
 
 #### Example config
 
