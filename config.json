@@ -1,8 +1,4 @@
 {
-  "max_depth": 25,
-  "min_sleep": 3,
-  "max_sleep": 6,
-  "timeout": false,
   "root_urls": ["https://github.com"],
   "blacklisted_urls": [
     "https://t.co",
