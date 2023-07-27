@@ -17,5 +17,12 @@
   },
   "bin": {
     "noisyjs": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachey01/noisyJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zachey01/noisyJS/issues"
   }
 }
