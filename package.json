@@ -1,10 +1,10 @@
 {
   "name": "noisyjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Random internet traffic noise generator.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx noisyjs"
   },
   "keywords": [],
   "author": "Zachey",
