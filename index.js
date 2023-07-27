@@ -172,13 +172,17 @@ class Crawler {
 function main() {
   const parser = new argparse.ArgumentParser();
   parser.addArgument("--config", "-c", {
-    type: String,
+    type: "string",
     help: "config file",
-    required: true,
+    required: false,
   });
   const args = parser.parseArgs();
   const crawler = new Crawler();
-  crawler.loadConfigFile(args.config);
+  if (args.config === undefined) {
+    crawler.loadConfigFile("./config.json");
+  } else {
+    crawler.loadConfigFile(args.config);
+  }
   crawler.crawl();
 }
 
