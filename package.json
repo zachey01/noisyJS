@@ -24,5 +24,8 @@
   },
   "bugs": {
     "url": "https://github.com/zachey01/noisyJS/issues"
+  },
+  "devDependencies": {
+    "describe": "^1.2.0"
   }
 }
