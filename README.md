@@ -2,12 +2,6 @@
 
 > Simple random internet traffic generator.
 
-
-
-https://github.com/zachey01/noisyJS/assets/63107653/3137b0bf-9242-435c-a306-f45447be15e2
-
-
-
 ### Installation
 
 ```shell
