@@ -27,11 +27,15 @@ class Crawler {
   static CrawlerTimedOut = class extends Error {};
 
   async _request(url) {
-    // proxy
+    let timeout = 5000
     let agent = null
-    const { proxy } = this._config
+    // parse config
+    const { proxy, timeout:configTimeout } = this._config
     if(proxy) {
       agent = new SocksProxyAgent(proxy)
+    }
+    if(configTimeout) {
+      timeout = configTimeout
     }
 
     const randomUserAgent =
@@ -40,7 +44,7 @@ class Crawler {
       ];
     const headers = { "user-agent": randomUserAgent };
 
-    const response = await axios.get(url, { headers, timeout: 5000, httpAgent: agent, httpsAgent: agent });
+    const response = await axios.get(url, { headers, timeout, httpAgent: agent, httpsAgent: agent });
 
     return response;
   }
