@@ -2,6 +2,8 @@ const axios = require("axios");
 const { URL, parse: parseUrl, resolve: resolveUrl } = require("url");
 const { JSDOM } = require("jsdom");
 const chalk = require("chalk");
+const { SocksProxyAgent } = require('socks-proxy-agent');
+
 
 /**
  * Example Usage:
@@ -25,13 +27,20 @@ class Crawler {
   static CrawlerTimedOut = class extends Error {};
 
   async _request(url) {
+    // proxy
+    let agent = null
+    const { proxy } = this._config
+    if(proxy) {
+      agent = new SocksProxyAgent(proxy)
+    }
+
     const randomUserAgent =
       this._config.user_agents[
         Math.floor(Math.random() * this._config.user_agents.length)
       ];
     const headers = { "user-agent": randomUserAgent };
 
-    const response = await axios.get(url, { headers, timeout: 5000 });
+    const response = await axios.get(url, { headers, timeout: 5000, httpAgent: agent, httpsAgent: agent });
 
     return response;
   }
